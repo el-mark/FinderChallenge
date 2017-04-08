@@ -1,7 +1,8 @@
-function searchForm(){
-    // code here
-}
+/*
 
+  SE ESTA UTILIZANDO JQUERY, TODO ESTO SE PUEDE PASAR A PURO JS O A OTRO FRAMEWORK DE JS
+
+*/
 
 
 var input = document.getElementById("search-input");

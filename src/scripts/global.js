@@ -1,5 +1,8 @@
 /*
   constants and global functions
+
+  SE ESTA UTILIZANDO JQUERY, TODO ESTO SE PUEDE PASAR A PURO JS O A OTRO FRAMEWORK DE JS
+
 */
 
 var JSON_FILE = '/books_schema.json';

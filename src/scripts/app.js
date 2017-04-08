@@ -1,8 +1,9 @@
 /*
   main script for only runs every function
-*/
 
-searchForm();
+  SE ESTA UTILIZANDO JQUERY, TODO ESTO SE PUEDE PASAR A PURO JS O A OTRO FRAMEWORK DE JS
+
+*/
 
 function printData(data){
 
@@ -16,20 +17,26 @@ function printData(data){
 		    	$( "#"+category+"" ).append('<li><a href="#">' + subCategorys[subCategory].label + '</a></li>');
 	    	}
     	} else {
-    		console.log(categorys);
     		var savedSearches = categorys[category];
 	    	for (var savedSearch in savedSearches) {
 		    	$( "#"+category+"" ).append('<li><a href="'+savedSearches[savedSearch].url+'">' + savedSearches[savedSearch].label + '</a></li>');
-	    		console.log(savedSearch);
 	    	}
     	}
     }
 }
 
-
+// Ajax de Jquery para recuperar la data de books-schema.json
 $.ajax({
     url: "books-schema.json",
     success: function (data) {
     	printData(data);
     }
+});
+
+// La instrucción dice eliminar de la vista, se puede esconder o elimitar el elimento html, en este caso obtaré por eliminar el elemento
+$('.delete-button').click(function(e) {
+    e.preventDefault();
+    var option = $(this).attr("option");
+    console.log(option);
+    $( "#"+option ).remove();
 });
