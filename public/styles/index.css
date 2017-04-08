@@ -1,0 +1,36 @@
+* {
+  font-family: "Proxima Nova";
+}
+.app {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.search-form {
+  margin-top: 33px;
+}
+@media only screen and (max-width: 650px) {
+  .search-form {
+    display: none;
+  }
+}
+.logo{
+	font-size: 2.3em;
+}
+.header-link{
+	margin-top: 35px;
+}
+.save-search{
+	background: none;
+  border: none;
+  text-decoration: underline;
+  color: blue;
+}
+.saved-searches{
+	list-style: none;
+}
+/*.saved-searches li{
+	background: none;
+  border: none;
+  text-decoration: underline;
+  color: blue;
+}*/
