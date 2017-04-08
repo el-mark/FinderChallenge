@@ -34,3 +34,6 @@
   text-decoration: underline;
   color: blue;
 }*/
+.categorys{
+	text-transform: capitalize;
+}

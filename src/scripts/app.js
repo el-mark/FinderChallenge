@@ -5,10 +5,24 @@
 searchForm();
 
 function printData(data){
-    console.log(data.entities);
 
-    for (var key in data.entities) {
-    	$( ".saved-searches-div" ).append('<h2>' + key + '</h2>');
+	var categorys = data.entities;
+
+    for (var category in categorys) {
+    	$( ".saved-searches-div" ).append('<h2 class="categorys">' + category + '</h2><ul id="'+ category +'" class="saved-searches" ></ul>');
+    	if (category != 'saved') {
+    		var subCategorys = categorys[category][0];
+	    	for (var subCategory in subCategorys) {
+		    	$( "#"+category+"" ).append('<li><a href="#">' + subCategorys[subCategory].label + '</a></li>');
+	    	}
+    	} else {
+    		console.log(categorys);
+    		var savedSearches = categorys[category];
+	    	for (var savedSearch in savedSearches) {
+		    	$( "#"+category+"" ).append('<li><a href="'+savedSearches[savedSearch].url+'">' + savedSearches[savedSearch].label + '</a></li>');
+	    		console.log(savedSearch);
+	    	}
+    	}
     }
 }
 
