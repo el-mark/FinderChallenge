@@ -37,3 +37,15 @@
 .categorys{
 	text-transform: capitalize;
 }
+.add-options{
+	height: 50px;
+}
+.add-options:hover{
+	background-color: lightblue;
+}
+.add-options div{
+	display: none;
+}
+.add-options:hover div{
+	display: block;
+}
